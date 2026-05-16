@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: autoanima
+  datasource:
+    url: jdbc:postgresql://localhost:5432/autoanima
+    username: postgres
+    password: Post#CW2cd
+    jackson:
+      default-property-inclusion: non_null
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  logging:
+    level:
+      org.hibernate.SQL: DEBUG
+      org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+  server:
+    error:
+      include-message: Always
