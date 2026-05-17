@@ -9,5 +9,4 @@ public class AutoanimaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AutoanimaApplication.class, args);
 	}
-
 }
