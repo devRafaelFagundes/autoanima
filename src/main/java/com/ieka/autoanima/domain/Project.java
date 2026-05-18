@@ -1,11 +1,13 @@
 package com.ieka.autoanima.domain;
 
 import jakarta.persistence.*;
+import lombok.EqualsAndHashCode;
 
 import java.time.LocalDateTime;
 import java.util.Set;
 
 @Entity
+@EqualsAndHashCode(of = "id")
 public class Project {
 
     @Id

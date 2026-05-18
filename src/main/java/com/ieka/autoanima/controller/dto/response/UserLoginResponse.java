@@ -1,4 +1,4 @@
 package com.ieka.autoanima.controller.dto.response;
 
-public class UserLoginResponse {
+public record UserLoginResponse(String token, Integer expiresIn) {
 }

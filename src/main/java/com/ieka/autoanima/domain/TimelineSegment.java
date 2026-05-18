@@ -1,8 +1,10 @@
 package com.ieka.autoanima.domain;
 
 import jakarta.persistence.*;
+import lombok.EqualsAndHashCode;
 
 @Entity
+@EqualsAndHashCode(of = "id")
 public class TimelineSegment {
 
     @Id

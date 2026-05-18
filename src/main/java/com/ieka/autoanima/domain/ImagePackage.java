@@ -1,10 +1,12 @@
 package com.ieka.autoanima.domain;
 
 import jakarta.persistence.*;
+import lombok.EqualsAndHashCode;
 
 import java.util.Set;
 
 @Entity
+@EqualsAndHashCode(of = "id")
 public class ImagePackage {
 
     @Id
@@ -22,7 +24,10 @@ public class ImagePackage {
             joinColumns = @JoinColumn(name = "image_package_id"),
             inverseJoinColumns = @JoinColumn(name = "project_id")
     )
-    Set<Project>  projects;
+    Set<Project> projects;
+
+    @ManyToMany(mappedBy = "imagePackages")
+    private Set<Image> images;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
